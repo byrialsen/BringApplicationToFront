@@ -9,6 +9,27 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <StackPanel Orientation="Horizontal" >
+                <TextBox Text="notepad" HorizontalAlignment="Stretch" Width="400" IsReadOnly="True" />
+                <Button HorizontalAlignment="Right" Click="OnLaunchClickedNotepad">
+                    <SymbolIcon Symbol="Play" />
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBox Text="CVTHMI" HorizontalAlignment="Stretch" Width="400" IsReadOnly="True" />
+                <Button HorizontalAlignment="Right" Click="OnLaunchClickedCvtHmi" >
+                    <SymbolIcon Symbol="Play" />
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" >
+                <TextBox x:Name="TextBoxLaunchApp" Text="" HorizontalAlignment="Stretch" Width="400" />
+                <Button HorizontalAlignment="Right" Click="OnLaunchClicked">
+                    <SymbolIcon Symbol="Play" />
+                </Button>
+            </StackPanel>
+            <Button Content="Check tablet mode" Click="OnCheckTabletMode" />
+            <ToggleSwitch x:Name="TabletSwitch" IsEnabled="False" OnContent="Tablet mode" OffContent="Normal" />
+        </StackPanel>
     </Grid>
 </Page>
